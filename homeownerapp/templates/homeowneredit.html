@@ -1,0 +1,48 @@
+{% extends 'homeownerbase.html' %}
+
+ {% block homeowner %}
+<h3>Edit profile </h3>
+<form  method="POST" class="row" enctype="multipart/form-data" style="background-color: lightcoral;height:500px">
+    {% csrf_token %}
+<div class="col-sm-6">
+    <label for="n" class="form-label" style="font-weight: 700;font-size: larger;margin-top: 10px;">Name</label>
+    <input type="text" value="{{homeowner.name}}" name="name"
+    id="n" class="form-control"> 
+</div>
+
+<div class="col-sm-6">
+    <label for="cm" class="form-label"  style="font-weight: 700;font-size: larger;margin-top: 10px;">Contact</label>
+    <input type="text" value="{{homeowner.contactno}}" name="contactno"
+    id="cm" class="form-control" > 
+</div>
+
+<div class="col-sm-6">
+    <label for="em" class="form-label" style="font-weight: 700;font-size: larger;">Email</label>
+    <input type="text" value="{{homeowner.email}}" name="email"
+    id="em" class="form-control" disabled> 
+</div>
+
+<div class="col-sm-6">
+    <label for="pro" class="form-label"  style="font-weight: 700;font-size: larger;">Choose profile picture</label>
+    <input type="file"  name="profile"
+    id="pro" class="form-control"> 
+</div>
+<div class="col-sm-12">
+    <label for="ad" class="form-label"  style="font-weight: 700;font-size: larger;">Enter full address</label>
+    <textarea name="address" value="{{homeowner.address}}" class="form-control" id="ad"></textarea>
+    
+</div>
+<div class="col-sm-12">
+    <label for="bio" class="form-label"  style="font-weight: 700;font-size: larger;">BIO</label>
+    <textarea name="bio" value="{{homeowner.bio}}" class="form-control" id="bio"></textarea>
+    
+</div>
+<div class="col-sm-12 text-center" >
+    <button type="submit" class="btn  w-50                                                                                                                                                                                                                                                                                                                                                                  " style="background-color:#1890ff"> Update</button>
+    
+</div>
+
+
+
+</form>
+ {% endblock %}

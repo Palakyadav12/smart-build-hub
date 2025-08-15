@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Register
+{% endblock %}
+{% block main %}
+
+
+<div class="row" style="background-color: #1e2939; height:120vh;">
+    <div class="col-sm-6" id="left-part">
+        <div class="content-box">
+            <h2 style="color:white ; font-weight: 300;">Build Your Future</h2>
+            <p style="color:white">Join our platform to access exclusive construction services and project management
+                tools.</p><br><br><br><br><br><br>
+            <h6 style="color:white;padding-top: 200px;">Secure Access</h6>
+            <p style="color:white;">Your data is always protected</p>
+            <h6 style="color:white;padding-top:20px">Quick Setup</h6>
+            <p style="color:white">Get started in less than 2 minutes</p>
+        </div>
+    </div>
+            {% csrf_token %}
+    <div class="col-sm-6" id="right-part">
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="{% url 'signin' %}"
+                    style="display: flex;justify-content: center;padding-top:20px;font-weight: 100;color:black;cursor: pointer;text-decoration: none;">Sign
+                    In</a>
+            </div>
+            <div class="col-sm-6">
+                <a href="{% url 'register' %}"
+                    style="display: flex;justify-content: center;padding-top:20px;font-weight: 100;color:black;cursor: pointer;text-decoration: none;">Sign
+                    Up</a>
+            </div>
+        </div>
+         {% if messages %}
+
+        {% for m in messages %}
+
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{m}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+<form method="post">
+{% csrf_token %}
+        <div class="row">
+            <div class="col-sm-12" style="padding-top:20px;">
+                <h4 style="font-weight: 600;">Create Account</h4>
+            </div>
+        </div>
+        <div class="w-40">
+            <label for=" name" style="color:black;margin-top: 10px;">Name</label>
+            <input type="text" name="name" class="form-control " placeholder="Enter your Name"required>
+        </div>
+        <div class="w-80">
+            <label for="email" style="color:black ; margin-top: 20px;">Email</label>
+            <input type="text" name="email" class="form-control " placeholder="Email address"required>
+        </div>
+         <div class="w-80">
+            <label for="contactno" style="color:black ; margin-top: 20px;">Contact no</label>
+            <input type="text" name="contactno" class="form-control " placeholder="Contact No"required>
+        </div>
+        <div class="w-80">
+            <div class="form-group">
+      <label for="usertype" style="color:black;margin-top: 20px;">User Type</label>
+      <select id="usertype" name="usertype" required>
+        <option value selected disabled="select usertype">Select usertype</option>
+        <option value="homeowner">Home Owner</option>
+        <option value="contractor">Contractor</option>
+      </select>
+    </div>
+
+           
+        </div>
+        <div class="w-80">
+            <label for="password" style="color:black ;margin-top:20px;">Password</label>
+            <input type="password" name="password" class="form-control " placeholder="Password"required>
+        </div>
+       
+        
+        <button type="submit"
+            style="width: 90%;height:50px; margin-top:20px;margin-left: 20px;background-color: orangered;color: white;border-radius: 15px;border: none;">
+            Create Account</button>
+    </div>
+    </form>
+</div>
+</div>
+
+
+
+
+
+
+    {% endblock %}

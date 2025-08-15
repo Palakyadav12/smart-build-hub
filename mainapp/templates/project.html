@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+About
+{% endblock %}
+{% block main %}
+
+            <section class="featured-projects">
+                <div class="container">
+                    <p class="subheading">— EXCELLENCE IN CONSTRUCTION</p>
+                    <h2>Our Featured Projects</h2>
+                    <p class="description">
+                        Browse our portfolio of exceptional construction projects spanning commercial, residential, and
+                        public sectors.
+                        Each project reflects our commitment to quality and innovation.
+                    </p>
+
+                    <div class="stats">
+                        <div class="stat-card">
+                            <h3>250+</h3>
+                            <p style="color: black;font-size: large;">Projects Completed</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>30+</h3>
+                            <p style="color: black;font-size: large;">Years Experience</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>120+</h3>
+                            <p style="color: black;font-size: large;">Expert Team Members</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>98%</h3>
+                            <p style="color: black;font-size: large;">Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <section class="portfolio">
+        <div class="container">
+            <div class="grid">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="{% static 'img/modern.png' %}" alt="Logo"  class="zoom-image" height="500" width="500">
+                    <div class="overlay">
+                        <span class="category">Commercial</span>
+                        <h3>Modern Office Complex</h3>
+                        <p>A contemporary office space designed for maximum productivity and employee wellbeing.</p>
+                        <a href="#">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card"> 
+                <img src="{% static 'img/1.jpg' %}" alt="Logo"  class="zoom-image" height="500" width="500">
+                    <div class="overlay">
+                        <span class="category">Residential</span>
+                        <h3>Luxury Residential Tower</h3>
+                        <p>Premium living spaces with state-of-the-art amenities and stunning city views.</p>
+                        <a href="#">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+
+                    <img src="{% static 'img/sustainablecommunity.png' %}" alt="Logo"  class="zoom-image" height="500" width="500">
+                    <div class="overlay">
+                        <span class="category">Public</span>
+                        <h3>Sustainable Community Center</h3>
+                        <p>Eco-friendly architecture designed to bring communities together.</p>
+                        <a href="#">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card">
+                    <img src="{% static 'img/industrialmanufacturing.png' %}" alt="Logo"  class="zoom-image" height="500" width="500">
+                    <div class="overlay">
+                        <span class="category">Industrial</span>
+                        <h3>Industrial Manufacturing Hub</h3>
+                        <p>Cutting-edge industrial facilities designed for optimal workflow and efficiency.</p>
+                        <a href="#">View Project →</a>
+                    </div>
+                </div>
+
+
+                <!-- Card 5 -->
+                <div class="card" >
+                    <img src="{% static 'img/waterfront.png' %}" alt="Logo" height="500" width="500"  class="zoom-image">
+                    <div class="overlay">
+                        <span class="category">Hospitality</span>
+                        <h3>Waterfront Hotel & Spa</h3>
+                        <p>Luxury hospitality project featuring elegant design and premium guest experiences.</p>
+                        <a href="#">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card">
+                    <img src="{% static 'img/urban.png' %}" alt="Logo" height="500" width="500"  class="zoom-image">
+                    <div class="overlay">
+                        <span class="category">Mixed-Use</span>
+                        <h3>Urban Mixed-Use Development</h3>
+                        <p>Integrated commercial and residential spaces designed for modern urban living.</p>
+                        <a href="#">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="project-call">
+        <h2>Ready to Build Your Dream Project?</h2>
+        <p>Let's discuss how our expertise can bring your vision to life. Contact our team today.</p>
+        <a href="{% url 'contact' %}" class="btn-touch">Get In Touch</a>
+    </div>
+    {% endblock %}

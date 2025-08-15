@@ -1,0 +1,50 @@
+{% extends 'contractorbase.html' %}
+
+
+{% block contractor %}
+
+<h1>Contractor Applications</h1>
+<table class="table">
+ <tr>
+    <th>S.no</th>
+    <th>Project Name</th>
+    <th>homeowner Name</th>
+    <th>Design</th>
+    <th>Estimated Budget</th>
+    <th>Estimated Duration</th>
+    <th>status</th>
+    <th>Submitted At</th>
+ </tr>
+ {% for a in applications %}
+ <tr>
+    <td>{{forloop.counter}}</td>
+    <td>{{a.project.projectname}}</td>
+    <td>{{a.project.homeowner.name}}</td>
+    <td>
+        {% if a.design_file %}
+        <a href="{{a.design_file.url}}" target="_blank" class="btn btn-primary">View</a>
+        {% else %}
+        No design File
+        {% endif %}
+    </td>
+   
+    <td>{{a.estimated_budget}}</td>
+    <td>{{a.estimated_duration}}</td>
+    <td>
+        {% if a.status == 'pending' %}
+        <span class="btn btn-warning btn-sm">Pending</span>
+        {% elif a.status == 'approved' %}
+        <span class="btn btn-success btn-sm">Approved</span>
+        {% elif a.status == 'rejected' %}
+        <span class="btn btn-danger btn-sm">Rejected</span>
+        {% else %}
+        {{a.status}}
+        {% endif %}
+    </td>
+    <td>{{a.submitted_at}}</td>
+ </tr>
+ {% endfor %}
+</table>
+
+
+{% endblock %}

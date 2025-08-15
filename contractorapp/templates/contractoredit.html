@@ -1,0 +1,48 @@
+{% extends 'contractorbase.html' %}
+
+ {% block contractor %}
+<h3>Edit profile </h3>
+<form  method="POST" class="row" enctype="multipart/form-data">
+    {% csrf_token %}
+<div class="col-sm-6">
+    <label for="n" class="form-label">Name</label>
+    <input type="text" value="{{contractor.name}}" name="name"
+    id="n" class="form-control"> 
+</div>
+
+<div class="col-sm-6">
+    <label for="cm" class="form-label">Contact</label>
+    <input type="text" value="{{contractor.contactno}}" name="contactno"
+    id="cm" class="form-control"> 
+</div>
+
+<div class="col-sm-6">
+    <label for="em" class="form-label">Email</label>
+    <input type="text" value="{{contractor.email}}" name="email"
+    id="em" class="form-control" disabled> 
+</div>
+
+<div class="col-sm-6">
+    <label for="pro" class="form-label">Choose profile picture</label>
+    <input type="file"  name="profile"
+    id="pro" class="form-control"> 
+</div>
+<div class="col-sm-12">
+    <label for="ad" class="form-label">Enter full address</label>
+    <textarea name="address" value="{{contractor.address}}" class="form-control" id="ad"></textarea>
+    
+</div>
+<div class="col-sm-12">
+    <label for="bio" class="form-label">BIO</label>
+    <textarea name="bio" value="{{contractor.bio}}" class="form-control" id="bio"></textarea>
+    
+</div>
+<div class="col-sm-12 text-center">
+    <button type="submit" class="btn btn-success"> Update</button>
+    
+</div>
+
+
+
+</form>
+ {% endblock %}

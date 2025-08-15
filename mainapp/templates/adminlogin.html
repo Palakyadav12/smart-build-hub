@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+    body{
+        background-image: url("{% static 'img/photo1.png' %}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+        margin: 0;
+    }
+</style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 mx-auto my-auto">
+                <div class="card" style="height: 370px;margin-top: 100px;margin-left: 30px;">
+                    <div class="text-center">
+                        <img src="{% static 'img/logo.png' %}" alt="logo" height="60" width="70">
+                    </div>
+                    <h4 class="text-center">Welcome Admin</h4>
+                    {% if messages %}
+
+                    {% for m in messages %}
+
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        {{m}}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="form-floating mb-3">
+                            <input type="text" name="username" class="form-control" id="floatingInput"
+                                placeholder="name@example.com">
+                            <label for="floatingInput">username</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" name="password" class="form-control" id="password"
+                                placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <button type="submit" class="btn mt-4 w-80" style="background-color: orange; width: 380px; margin-left:10px;">Login</button>
+                        <p class="mt-4 mx-3">&copy;smartbuildhub<a href="{% url 'index' %}" class="float-end fw-semibold  mx-3">Back to home</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        Base 
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+ <!-- Bootstrap & Slick CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+</head>
+
+
+<body>
+
+    <!-- nav start -->
+    <div class="row">
+        <div class="col-sm-12" style="background-color:rgb(22, 22, 24)">
+            <nav class="navbar navbar-expand">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <img src="{% static 'img/logo.png' %}" alt="logo" height="75" width="80" style="margin-left: 40px;">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="center-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" style="color:white" href="{% url 'index' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color:white" href="{% url 'service' %}">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color:white" href="{% url 'project' %}">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " style="color:white" href="{% url 'about' %}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " style="color:white" href="{% url 'contact' %}">Contact</a>
+                        </li>
+                    </ul>
+
+                    <a href="{% url 'signin' %}"
+                        style="background-color: orange;color: white;border: none;padding:10px 20px;border-radius: 5px;text-decoration: none;margin-right: 40px;">Sign
+                        In</a>
+                    </form>
+                </div>
+        </div>
+        </nav>
+    </div>
+
+
+
+    <!-- nav end -->
+
+    {% block main %}
+    {% endblock %}
+    <div class="footer">
+        <div class="footer-col col-1" id="column1" data-aos="fade-up" data-aos-delay="100" style="margin-left: 40px;">
+            <img src="{% static 'img/logo.png' %}" alt="logo" height="70" width="90" class="footer-logo">
+            <p>
+                An innovative digital platform transforming traditional home construction methods through
+                seamless collaboration between homeowners, architects, contractors, and suppliers.
+            </p>
+        </div>
+
+        <div class="footer-col" id="column2" data-aos="fade-up" data-aos-delay="300" style="margin-left: 70px;">
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col" id="column3"data-aos="fade-up" data-aos-delay="500">
+            <h3 class="footer-heading">Our Services</h3>
+            <ul>
+                <li><a href="#">Project Management</a></li>
+                <li><a href="#">Architecture Planning</a></li>
+                <li><a href="#">Contractor Collaboration</a></li>
+                <li><a href="#">Supply Chain Solutions</a></li>
+                <li><a href="#">Sustainability Consulting</a></li>
+                <li><a href="#">Client Portal Access</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col" id="column4"data-aos="fade-up" data-aos-delay="700">
+            <h3 class="footer-heading">Contact Us</h3>
+            <p>📍 123 Construction Avenue,<br> Building District, CA 90210</p>
+            <p>📧 info@smartbuildhub.com</p>
+            <p>📞 +91 7007575886</p>
+            <input type="email" placeholder="Your email">
+            <button>→</button>
+        </div>
+
+    </div>
+    <!-- map start -->
+
+
+    <div class="map">
+        <div class="map-round">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7112.552489069841!2d80.99890800000001!3d26.95815!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bff2addd9b239%3A0xc21a9bbd557936ec!2sIntegral%20University!5e0!3m2!1sen!2sin!4v1753361793882!5m2!1sen!2sin"
+                width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <div class="seperate"></div>
+        <div class="footer-container">
+            <div class="name">
+                © 2025 SmartBuild Hub. Designed and Developed by <span id="sp">Palak yadav.</span>
+            </div>
+            <div class="right">
+                <a href=""> Privacy Policy</a>
+                <a href=""> Terms of Service</a>
+                <a href=""> Cookie Policy</a>
+                <a href="{% url 'adminlogin' %}">Admin Dashboard</a>
+            </div>
+        </div>
+    </div>
+    <!-- map end -->
+    </div>
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>  
+<script>
+  AOS.init({
+    duration:1000,
+    once:true,
+    offset:200,
+    mirror:false
+    });
+</script>
+
+
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+ <!-- jQuery & Slick JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+<script>
+    $(document).ready(function(){
+      $('.slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false,
+        infinite: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: { slidesToShow: 2 }
+          },
+          {
+            breakpoint: 480,
+            settings: { slidesToShow: 1 }
+          }
+        ]
+      });
+    });
+  </script>
+
+
+<!-- index transition -->
+
+<script>
+function moveBoxUp(box) {
+  // Remove 'clicked' class from all boxes
+  document.querySelectorAll('.custom-box').forEach(b => b.classList.remove('clicked'));
+  // Add 'clicked' to the clicked box
+  box.classList.add('clicked');
+}
+
+function changeImageColor(event, img) {
+  event.stopPropagation(); // Prevent box click event
+  img.classList.toggle('gray'); // Toggle grayscale filter
+}
+</script>
+
+
+
+
+<!-- index transition end -->
+
+
+
+
+</body>
+
+</html>

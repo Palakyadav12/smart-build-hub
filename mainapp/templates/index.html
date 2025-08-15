@@ -1,0 +1,463 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+About
+{% endblock %}
+{% block main %}
+<div class="row" id="r">
+    <div class="col-sm-12">
+        <h1 id="start">-BUILDING TOMORROW TODAY</h1>
+        <h2 id="starts" style="color:white;margin-top: 10px;">Transforming Visions Into Exceptional Structures</h2>
+        <p id="heading">With over 25 years of experience, we deliver innovative construction solutions that exceed
+            expectations and stand the test of time.</p>
+
+        <div style="display: flex; gap:20px;">
+            <button
+                style="margin-left: 44px;margin-top: 20px;height: 50px;background-color: orange;width:150px;border-radius: 12px;border: none;">Get
+                Started ></button>
+            <button style="margin-top: 20px;height: 50px;background-color: orange;border-radius: 12px;width:150px;border: none;">Our
+                Projects ></button>
+        </div>
+        <div id="bod">
+            <div class="state">
+                <div class="stat-card">
+                    <h3>30+</h3>
+                    <p style="color: black;">Years Experience</p>
+                </div>
+                <div class="stat-card">
+                    <h3>250+</h3>
+                    <p style="color: black;">Projects Completed</p>
+                </div>
+                <div class="stat-card">
+                    <h3>98%</h3>
+                    <p style="color: black;">Client Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" style="background-color: white;margin-bottom: 70px;">
+    <div class="col-sm-6">
+        <h4 style="color:orangered;justify-content: left; margin-left: 50px;margin-top: 60px;">ABOUT OUR COMPANY</h4>
+        <h1 style="color:black;justify-content: left; margin-left: 50px;margin-top: 20px;font-weight: 600;">Building
+            Dreams With </br>Excellence & Reliability</h1>
+        <p style="margin-left: 50px;margin-top: 20px;font-weight: 300px;">With decades of industry experience, our team
+            of professional builders and</br> architects are dedicated to bringing your vision to life. We handle
+            projects of </br>any scale with meticulous attention to detail and unwavering commitment to quality</p>
+
+        <div style="margin-left: 50px;margin-top: 30px;"><i class="fa-solid fa-circle-check"
+                style="color: orangered;height: 30px;width: 30px;"></i>Professional team of experienced builders and
+            designers</div>
+        <div style="margin-left: 50px;margin-top:20px;"><i class="fa-solid fa-circle-check"
+                style="color: orangered;height: 30px;width: 30px;"></i>High-quality materials sourced from trusted
+            supplier</div>
+        <div style="margin-left: 50px;margin-top:20px;"><i class="fa-solid fa-circle-check"
+                style="color: orangered;height: 30px;width: 30px;"></i>On-time project completion and transparent
+            communication</div>
+        <button
+            style="background-color: orangered;height: 50px;width:250px;margin-left: 50px;margin-top: 40px;border: none;border-radius: 10px;color: white;">Learn
+            More About Us ></button>
+    </div>
+    <div class="col-sm-6">
+        <img src="{% static 'img/const.png' %}" style="margin-top: 100px;border-radius: 5px;" id="imgs">
+    </div>
+</div>
+<div class="row" style="background-color:  #1e2134;">
+    <div class="col-sm-12">
+        <h4 id="main">- PLATFORM FEATURES -</h4>
+        <h1 id="main1">Powerful Tools for Modern Construction</h1>
+        <p
+            style="color:white;display: flex;justify-content: center;align-items: center;margin-top: 20px;font-size: larger;">
+            Our comprehensive suite of features empowers every stakeholder in the construction process with the tools
+        </p>
+        <p style="color:white;display:  flex;justify-content: center;align-items: center;font-size: larger;">they need
+            to succeed.</p>
+
+    </div>
+    <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+            <div class="service-card p-4 bg-white rounded shadow-sm text-start h-100" style="margin-left: 40px;">
+                <div class="icons" style="text-align: center;">
+                    <img src="{% static 'img/dash.png' %}" style="border-radius: 5px;">
+                </div>
+
+                <h4 class="fw-bold text-dark" style="text-align:left ;margin-bottom: 30px;margin-top:40px;">Project
+                    Dashboard</h4>
+
+                <p class="text-black">Centralized hub for tracking progress, milestones, and resource allocation with
+                    intuitive visualizations.
+
+                </p>
+                <ul class="list-unstyled text-black">
+                    <li>✔ Real-time status tracking</li>
+                    <li>✔ Task management system</li>
+                    <li>✔ Budget monitoring</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-4">
+            <div class="service-card p-4 bg-white rounded shadow-sm text-start h-100" style="margin-left: 40px;">
+                <div class="icons" style="text-align: center;">
+                    <img src="{% static 'img/team.png' %}" style="border-radius: 5px;">
+                </div>
+
+                <h4 class="fw-bold text-dark" style="text-align:left ;margin-bottom: 30px;margin-top:40px;">Team
+                    Collaboration </h4>
+
+                <p class="text-black">
+                    Connect all stakeholders in one platform with powerful communication and file-sharing capabilities.
+                </p>
+                <ul class="list-unstyled text-black">
+                    <li>✔ Unified messaging system</li>
+                    <li>✔ Document sharing & approvals</li>
+                    <li>✔ Role-based permissions</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-4">
+            <div class="service-card p-4 bg-white rounded shadow-sm text-start h-100" style="margin-left: 40px;">
+                <div class="icons" style="text-align: center;">
+                    <img src="{% static 'img/role1.png' %}" style="border-radius: 5px;">
+                </div>
+
+                <h4 class="fw-bold text-dark" style="text-align:left ;margin-bottom: 30px;margin-top:40px;">Role-based
+                    permissions</h4>
+
+                <p class="text-black">
+                    Experience your construction project in three dimensions before breaking ground.
+                </p>
+                <ul class="list-unstyled text-black">
+                    <li>✔ Interactive models</li>
+                    <li>✔ Virtual walkthroughs</li>
+                    <li>✔ Design revisions in real-time</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="row" style="background-color: white;margin-top: 50px;">
+        <div class="col-sm-12">
+            <h3 style="display: flex;justify-content: center;color: orangered; margin-top: 60px;">- Our Services -</h3>
+            <h1 style="display: flex;justify-content: center;margin-top: 10px;font-weight: 700;">Comprehensive
+                Construction Solutions</h1>
+            <p style="display: flex;justify-content: center;font-size: larger;">We offer a wide range of construction
+                services tailored to meet the unique needs of each project, delivered </p>
+            <p style="display: flex;justify-content: center;font-size: larger;">with exceptional craftsmanship and
+                attention to detail.</p>
+            <div class="row g-4">
+                <!-- Card 1-->
+                <div class="col-md-4" data-aos="fade-left">
+                    <div class="card p-4 bg-white rounded shadow-sm text-start h-100"
+                        style="margin-left: 40px;border:1px solid black">
+                        <div class="icons" style="text-align: left;">
+                            <img src="{% static 'img/house.png' %}" style="border-radius: 5px;height:90px;width:90px">
+                        </div>
+
+                        <h4 class="fw-bold text-dark" style="text-align:left ;margin-bottom: 30px;margin-top:40px;">
+                            Residential Construction</h4>
+
+                        <p class="text-black">
+                            From custom homes to multi-family units, we build comfortable, energy-efficient residential
+                            spaces designed for modern living.</p>
+                        <a href="" style="color:orangered">Learn More-></a>
+
+                    </div>
+                </div>
+
+
+                <!-- Card 2-->
+                <div class="col-md-4" data-aos="fade-left" data-aos-delay="150">
+                    <div class="card p-4 bg-white rounded shadow-sm text-start h-100"
+                        style="margin-left: 40px;border:1px solid black">
+                        <div class="icons" style="text-align: left;">
+                            <img src="{% static 'img/commercial.png' %}"
+                                style="border-radius: 5px;height:90px;width:90px">
+                        </div>
+
+                        <h4 class="fw-bold text-dark" style="text-align:left ;margin-bottom: 30px;margin-top:40px;">
+                            Commercial Buildings</h4>
+
+                        <p class="text-black">
+                            Office spaces, retail centers, and industrial facilities built to the highest standards of
+                            quality and functionality.
+                        </p>
+                        <a href="" style="color:orangered">Learn More-></a>
+
+                    </div>
+                </div>
+
+                <!-- Card 3-->
+                <div class="col-md-4" data-aos="fade-left" data-aos-delay="300">
+                    <div class="card p-4 bg-white rounded shadow-sm text-start h-100"
+                        style="margin-left: 40px;border:1px solid black">
+                        <div class="icons" style="text-align: left;">
+                            <img src="{% static 'img/interior.png' %}"
+                                style="border-radius: 5px;height:90px;width:90px">
+                        </div>
+
+                        <h4 class="fw-bold text-dark" style="text-align:left ;margin-bottom: 30px;margin-top:40px;">
+                            Interior Design</h4>
+
+                        <p class="text-black">
+                            Transform your space with our expert interior design services, creating environments that
+                            inspire and delight.
+
+                        </p>
+                        <a href="" style="color:orangered">Learn More-></a>
+
+                    </div>
+                </div>
+
+                <!-- Card 4-->
+                <div class="col-md-4 " data-aos="fade-right" style="margin-bottom: 50px;">
+                    <div class="card p-4 bg-white rounded shadow-sm text-start h-100"
+                        style="margin-left: 40px;border:1px solid black;">
+                        <div class="icons" style="text-align: left;">
+                            <img src="{% static 'img/renovation.png' %}"
+                                style="border-radius: 5px;height:90px;width:90px">
+                        </div>
+
+                        <h4 class="fw-bold text-dark" style="text-align:left ;margin-bottom: 30px;margin-top:40px;">
+                            Renovation & Remodeling</h4>
+
+                        <p class="text-black">
+                            Breathe new life into existing structures with our comprehensive renovation and remodeling
+                            services.</p>
+                        <a href="" style="color:orangered">Learn More-></a>
+
+                    </div>
+                </div>
+                <!-- Card 5-->
+                <div class="col-md-4" data-aos="fade-right" data-aos-delay="150" style="margin-bottom: 50px;">
+                    <div class="card p-4 bg-white rounded shadow-sm text-start h-100"
+                        style="margin-left: 40px;border:1px solid black">
+                        <div class="icons" style="text-align: left;">
+                            <img src="{% static 'img/architectural.png' %}"
+                                style="border-radius: 5px;height:90px;width:90px">
+                        </div>
+
+                        <h4 class="fw-bold text-dark" style="text-align:left ;margin-bottom: 30px;margin-top:40px;">
+                            Architectural Design</h4>
+
+                        <p class="text-black">
+                            Innovative architectural solutions that balance aesthetics, functionality, and
+                            sustainability.
+
+                        </p>
+                        <a href="" style="color:orangered">Learn More-></a>
+
+                    </div>
+                </div>
+                <!-- Card 6-->
+                <div class="col-md-4" data-aos="fade-right" data-aos-delay="300" style="margin-bottom: 50px;">
+                    <div class="card p-4 bg-white rounded shadow-sm text-start h-100"
+                        style="margin-left: 40px;border:1px solid black;">
+                        <div class="icons" style="text-align: left;">
+                            <img src="{% static 'img/construction.jpg' %}"
+                                style="border-radius: 5px;height:90px;width:90px;">
+                        </div>
+
+                        <h4 class="fw-bold text-dark" style="text-align:left ;margin-bottom: 30px;margin-top:40px;">
+                            Construction Management</h4>
+
+                        <p class="text-black">
+                            Expert oversight of your project from concept to completion, ensuring efficiency and quality
+                            at every stage.</p>
+                        <a href="" style="color:orangered">Learn More-></a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row" style="background-color: #1e2134;margin-bottom: 40px;">
+        <div class="col-sm-12">
+            <h5 style="color: orange; display: flex;justify-content: left;margin-top: 80px;margin-left: 80px;">- OUR
+                PROJECTS</h5>
+            <h1 style="color:white;font-weight: 600;display: flex;justify-content: left;margin-left: 80px;">Featured
+                Construction Projects</h1>
+            <h6 style="color:white;font-weight: 400;display: flex;justify-content: left;margin-left: 80px;">Take a look
+                at some of our most impressive projects, showcasing our commitment to quality, innovation, and
+                excellence in construction.</h6>
+
+            <div class="container my-5" style="margin-left: 120px;">
+                <div class="slider">
+                    <div><img src="{% static 'img/Modern.png' %}" alt="img1"
+                            style="height: 350px;width:400px;padding-right: 80px;border-radius: 15px;"></div>
+                    <div><img src="{% static 'img/Luxury.png' %}" alt="img2"
+                            style="height: 350px;width: 400px;padding-right: 80px;border-radius: 15px;"></div>
+                    <div><img src="{% static 'img/sustainable.png' %}" alt="img3"
+                            style="height: 350px;width:400px;padding-right: 80px;border-radius: 15px;"></div>
+                    <div><img src="{% static 'img/Industrial.png' %}" alt="img4"
+                            style="height: 350px;width:400px;padding-right: 80px;border-radius: 15px;"></div>
+                    <div><img src="{% static 'img/Waterfront.png' %}" alt="img5"
+                            style="height: 350px;width:400px;padding-right: 80px;border-radius: 15px;"></div>
+                    <div><img src="{% static 'img/Urban.png' %}" alt="img6"
+                            style="height: 350px;width:400px;padding-right: 80px;border-radius: 15px;"></div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="row" style="background-color: white;">
+        <div class="col-sm-12">
+            <h5 style="display: flex;justify-content: center;margin-top: 40px;font-weight: 600;">-OUR PROCESS-</h5>
+            <h2 style="display: flex;justify-content: center;color:black;font-weight: 700;color: orangered;">How
+                SmartBuild Hub Works</h2>
+            <p
+                style="display: flex;justify-content: center;margin-right: 100px;margin-left: 100px;margin-top: 20px;font-weight: 600;">
+                Our innovative platform transforms the construction journey from concept to completion through an
+            <p style="display: flex;justify-content: center;margin-right: 100px;margin-left: 100px;font-weight: 600;">
+                intuitive digital workflow that connects all stakeholders.</p>
+
+            <div class="row g-4">
+                <div class="container my-5">
+                    <div class="row justify-content-between">
+                        <div class="col-md-3" style="margin-top: 50px;">
+                            <div class="custom-box" onclick="moveBoxUp(this)">
+                                <img src="{% static 'img/book.png' %}" class="box-img"
+                                    onclick="changeImageColor(event, this)" alt="Box Image">
+                                <h5 class="mt-3">Project Planning </h5>
+                                <p style="text-align: left;">Create your vision with our intuitive tools. Define
+                                    requirements, set budgets, and establish timelines in a collaborative environment.
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-3" style="margin-top: 50px;">
+                            <div class="custom-box" onclick="moveBoxUp(this)">
+                                <img src="{% static 'img/team.png' %}" class="box-img"
+                                    onclick="changeImageColor(event, this)" alt="Box Image">
+                                <h5 class="mt-3">Team Assembly </h5>
+                                <p style="text-align: left;">Connect with architects, contractors, and suppliers through
+                                    our verified network to build your ideal construction team.</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-3" style="margin-top: 50px;">
+                            <div class="custom-box" onclick="moveBoxUp(this)">
+                                <img src="{% static 'img/project-execution.png' %}" class="box-img"
+                                    onclick="changeImageColor(event, this)" alt="Box Image">
+                                <h5 class="mt-3">Project Execution</h5>
+                                <p style="text-align: left;">Monitor progress in real-time, approve changes instantly,
+                                    and maintain clear communication throughout construction.</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-3" style="margin-top: 50px;">
+                            <div class="custom-box" onclick="moveBoxUp(this)">
+                                <img src="{% static 'img/project-completed.png' %}" class="box-img"
+                                    onclick="changeImageColor(event, this)" alt="Box Image">
+                                <h5 class="mt-3">Project Completion </h5>
+                                <p style="text-align: left;">Receive comprehensive documentation, warranty information,
+                                    and maintenance schedules for your new construction.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="row" style="background-color:#ff6900;height: 550px;">
+        <div class="col-sm-6">
+            <h1 style="color:white;margin-top: 150px;margin-left: 80px;font-weight: 700;">Ready to Build Your Dream
+                Project?</h1>
+            <p style="margin-left: 80px;color: white;margin-top: 20px;">Let's discuss how we can bring your vision to
+                life with our expertise in construction and design.</p>
+            <button
+                style="margin-top:40px;margin-left: 80px;margin-right:10px;color:orangered;background-color:white;height:50px;width:200px;border-radius: 12px;border:none;font-weight: 600;">Get
+                Free Estimate ></button>
+            <button
+                style="color:orangered;height:50px;width:200px;border-radius: 12px;border:2px solid white;font-weight: 600;">Get
+                Free Estimate ></button>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-6" style="margin-top: 100px;">
+                    <div class="small-box">
+                        <div
+                            style="display: flex;justify-content: center;align-items: center;height: 70px;font-size: 30px;color:white;">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+                        <h5 style="text-align: center; color:white;font-weight: 700;">500+</h5>
+                        <p style="text-align:center;color:white;font-weight: 700;">Projects Completed</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6" style="margin-top: 100px;">
+                    <div class="small-box">
+                        <div class="small-box">
+                            <div
+                                style="display: flex;justify-content: center;align-items: center;height: 70px;font-size: 30px;color:white;">
+
+                                <i class="fa-solid fa-face-smile"></i>
+                            </div>
+                            <h5 style="text-align: center;color:white;font-weight: 700;">120+</h5>
+                            <p style="text-align: center;color:white;font-weight: 700;">Expert Team Members</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6" style="margin-top: 20px;">
+                        <div class="small-box">
+                            <div class="small-box">
+                                <div
+                                    style="display: flex;justify-content: center;align-items: center;height: 70px;font-size: 30px;color:white;">
+
+                                    <i class="fa-regular fa-calendar"></i>
+                                </div>
+                                <h5 style="text-align: center;color:white;font-weight: 700;">25+</h5>
+                                <p style="text-align: center;color:white;font-weight: 700;">Years Of Experience</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-sm-6" style="margin-top: 20px;">
+                        <div class="small-box" style="margin-left: 8px;">
+                            <div class="small-box">
+                                <div
+                                    style="display: flex;justify-content: center;align-items: center;height: 70px;font-size: 30px;color:white;">
+
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <h5 style="text-align: center;color:white;font-weight: 700;">98%</h5>
+                                <p style="text-align: center;color:white;font-weight: 700;">On Time Completion</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    {% endblock %}

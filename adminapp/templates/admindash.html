@@ -1,0 +1,81 @@
+{% extends 'adminbase.html' %}
+{% block admin %}
+
+<div class="container">
+    <h1 class="mt-4" style="justify-content: center;display: flex;color: red;">Welcome, Admin!</h1>
+
+    <div class="row mt-4">
+        <!-- Total Homeowners -->
+        <div class="col-md-4 mb-3">
+            <div class="card text-white bg-primary" style="height:300px;width:250px;border-radius: 12px;">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;font-size: large;font-weight: 700;">Total Homeowners</h5>
+                    <h2>{{th}}</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Contractors -->
+        <div class="col-md-4 mb-3">
+            <div class="card text-white bg-success" style="height:300px;width:250px;border-radius: 12px;">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;font-size: large;font-weight: 700;">Total Contractors</h5>
+                    <h2>{{tc}}</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Projects -->
+        <div class="col-md-4 mb-3" >
+            <div class="card text-white bg-dark" style="height:300px;width:250px;border-radius: 12px;">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;font-size: large;font-weight: 700;">Total Projects</h5>
+                    <h3>{{tc}}</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Active Projects -->
+        <div class="col-md-4 mb-3" >
+            <div class="card text-white bg-info" style="height:300px;width:250px;border-radius: 12px;">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;font-size: large;font-weight: 700;">Active Projects</h5>
+                <h2>{{trp}}</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Completed Projects -->
+        <div class="col-md-4 mb-3">
+            <div class="card text-white bg-secondary" style="height:300px;width:250px;border-radius: 12px;">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;font-size: large;font-weight: 700;">Completed Projects</h5>
+                    <p class="card-text fs-4">{{ completed_projects }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Earnings -->
+        <div class="col-md-4 mb-3">
+            <div class="card text-white bg-warning"  style="height:300px;width:250px;border-radius: 12px;">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;font-size: large;font-weight: 700;">Total Earnings</h5>
+                    <p class="card-text fs-4">₹ {{ total_earnings }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Feedbacks -->
+        <div class="col-md-4 mb-3" >
+            <div class="card text-white bg-danger" style="height:300px;width:250px;border-radius: 12px;">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;font-size: large;font-weight: 700;">Feedback Received</h5>
+                    <p class="card-text fs-4">{{ total_feedbacks }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

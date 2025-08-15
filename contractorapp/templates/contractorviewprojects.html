@@ -1,0 +1,61 @@
+{% extends 'contractorbase.html' %}
+
+ {% block contractor %}
+ <h3>New Projects</h3>
+
+<div class="table-responsive">
+  <table class="table">
+    <tr>
+        <th>S.no</th>
+        <th>Project Name</th>
+        <th>Duration</th>
+        <th>Budget</th>
+        <th>Location</th>
+        <th>Homeowner</th>
+        <th>Status</th>
+        <th>Plot Size</th>
+        <th>House Type</th>
+        <th>No.of floors</th>
+        <th>Basement</th>
+        <th>Parking</th>
+        <th>Bedrooms</th>
+        <th>Bathrooms</th>
+        <th>Kitchen on each floor</th>
+        <th>Additional rooms</th>
+        <th>Outdooor areas</th>
+        <th>Action</th>
+    </tr>
+{% for p in projects %}
+<tr>
+    <td>{{forloop.counter}}</td>
+    <td>{{p.projectname}}</td>
+    <td>{{p.duration}} days</td>
+    <td>{{p.budget}}</td>
+    <td>{{p.location}}</td>
+    <td>
+        {% if p.homeowner.picture %}
+        <img src="{{p.homeowner.picture.url}}" width="50" height="50">
+        {% endif %}
+        {{p.homeowner.name}}
+        {{p.homeowner.contactno}}
+    </td>
+    <td>{{p.status}}</td>
+    <td>{{p.plot_size}}</td>
+    <td>{{p.house_type}}</td>
+    <td>{{p.num_floors}}</td>
+    <td>{{p.basement}}</td>
+    <td>{{p.parking_required}}</td>
+    <td>{{p.bedrooms}}</td>
+    <td>{{p.bathrooms}}</td>
+    <td>{{p.kitchen_each_floor}}</td>
+    <td>{{p.additional_rooms}}</td>
+    <td>{{p.outdoor_areas}}</td>
+    <td>
+        <a href="{% url 'applyproject' id=p.id %}" class="btn btn-primary">Apply</a>
+    </td>
+</tr>
+{% endfor %}
+  </table>
+</div>
+{% endblock %}
+

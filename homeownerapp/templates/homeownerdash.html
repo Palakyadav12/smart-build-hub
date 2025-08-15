@@ -1,0 +1,90 @@
+{% extends 'homeownerbase.html' %}
+{% block homeowner %}
+
+<div class="container py-5">
+  <h2 class="mb-4 text-center">Welcome, Homeowner!</h2>
+
+  <div class="row g-4">
+    <!-- Project Overview Card -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card shadow rounded-3">
+        <div class="card-body">
+          <h5 class="card-title">Project Overview</h5>
+          <p>Current Stage: <strong>{{ project.stage }}</strong></p>
+          <p>Expected Completion: {{ project.estimated_completion }}</p>
+          <a href="" class="btn btn-outline-primary btn-sm mt-2">View Details</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Milestone Tracker -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card shadow rounded-3">
+        <div class="card-body">
+          <h5 class="card-title">Milestones</h5>
+          <ul class="list-group">
+            {% for milestone in milestones %}
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                {{ milestone.name }}
+                <span class="badge bg-success">{{ milestone.status }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notifications -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card shadow rounded-3">
+        <div class="card-body">
+          <h5 class="card-title">Notifications</h5>
+          <ul class="list-group">
+            {% for note in notifications %}
+              <li class="list-group-item">{{ note.message }}</li>
+            {% empty %}
+              <li class="list-group-item text-muted">No new updates.</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Document Access -->
+    <div class="col-md-6 col-lg-6">
+      <div class="card shadow rounded-3">
+        <div class="card-body">
+          <h5 class="card-title">Documents</h5>
+          <p>Access contracts, blueprints, reports.</p>
+          <a href="" class="btn btn-outline-secondary btn-sm">View Documents</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team Contacts -->
+    <div class="col-md-6 col-lg-6">
+      <div class="card shadow rounded-3">
+        <div class="card-body">
+          <h5 class="card-title">Your Team</h5>
+          {% for member in team %}
+            <p><strong>{{ member.role }}</strong>: {{ member.name }} | {{ member.phone }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- 3D Visualization -->
+    <div class="col-12">
+      <div class="card shadow rounded-3">
+        <div class="card-body">
+          <h5 class="card-title">3D Project Visualization</h5>
+          <iframe src="{{ project.visualization_url }}" width="100%" height="300" style="border:none;"></iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+{% endblock%}

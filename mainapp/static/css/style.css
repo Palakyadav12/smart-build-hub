@@ -1,0 +1,1039 @@
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  height: auto;
+}
+
+/* about start  */
+form {
+  margin-bottom: 0;
+}
+
+#center-nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 80%;
+}
+
+
+#head {
+  color: orange;
+  font-weight: bold;
+  font-size: 4rem;
+  text-align: center;
+  padding-top: 65px;
+}
+
+#he {
+  color: white;
+  font-size: 1.5rem;
+  margin: 40px;
+}
+
+#h {
+  color: orangered;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+#ht {
+  color: black;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+#pa {
+  display: flex;
+  text-align: center;
+  margin-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 50px;
+  font-size: 1.2rem;
+}
+
+.box-row {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  /* gap between boxes */
+  margin-top: 20px;
+  margin: 0 40px;
+  flex-wrap: wrap;
+}
+
+.box {
+  position: relative;
+  width: 250px;
+  height: 150px;
+  padding: 10px;
+  margin-top: 100px;
+  border: none;
+  border-bottom: 2px solid orangered;
+  border-radius: 12px;
+  /* curved corners */
+  text-align: center;
+  background-color: pink;
+  box-sizing: border-box;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  overflow: hidden;
+}
+
+.box:hover {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.line {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+  height: 3px;
+  background-color: orangered;
+  border-radius: 12px;
+
+}
+
+#im {
+  height: 350px;
+  width: 530px;
+  padding-left: 50px;
+  margin: 50px;
+}
+
+#lo {
+  color: orangered;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  overflow: hidden;
+}
+
+#bo {
+  position: relative;
+  width: 250px;
+  height: 230px;
+  padding: 10px;
+  margin-top: 100px;
+  text-align: center;
+  background-color: white;
+  box-sizing: border-box;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  overflow: hidden;
+  border: none;
+  border-radius: 12px;
+
+}
+
+.line1 {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+  height: 3px;
+  border-radius: 12px;
+}
+
+.box1 {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.line1 {
+  height: 3px;
+  width: 100%;
+  background-color: orangered;
+  opacity: 0;
+  /* hidden initially */
+  transition: opacity 0.3s ease;
+  border-radius: 50%;
+}
+
+/* Hover pe line visible */
+.box1:hover .line1 {
+  position: absolute;
+  opacity: 1;
+  border-radius: 12px;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+  height: 3px;
+
+}
+
+/* about end */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 30px;  /* <- instead of only top/bottom */
+  background-color: rgb(22, 22, 24);
+  color: #fff;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-col {
+  flex: 1 1 24%;
+  margin: 10px;
+  min-width: 180px;
+  transition: all 0.3s ease;
+}
+
+.footer-logo {
+  width: 50px;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+@media (max-width: 768px){
+  .footer-col{
+    flex: 1 1 100%;
+  }
+}
+
+/* 🟠 1st Column Hover Spread Effect */
+.col-1:hover {
+  transform: scale(1.03);
+}
+
+/* ✅ Headings underline on hover (for all columns) */
+.footer-heading {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.footer-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: orangered;
+  transition: width 0.3s ease;
+}
+
+.footer-heading:hover::after {
+  width: 100%;
+}
+
+/* 🔸 Common style for UL in all columns */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin: 8px 0;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+
+/* 🔸 Link style */
+.footer-col ul li a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* 🔸 Hover / click / active effect */
+.footer-col ul li:hover,
+.footer-col ul li:active {
+  transform: translateX(5px) scale(1.05);
+}
+
+.footer-col ul li a:hover,
+.footer-col ul li a:active {
+  color: orangered;
+  transform: translateX(3px);
+}
+
+/* ✅ Contact text in Column 4 (make like links) */
+.footer-col p {
+  margin: 10px 0;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-col p:hover,
+.footer-col p:active {
+  color: orangered;
+  transform: translateX(5px);
+}
+
+/* 📧 Email Input */
+.footer-col input[type="email"] {
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+  margin-top: 10px;
+  width: 70%;
+}
+
+.footer-col button {
+  padding: 8px 12px;
+  background-color: orangered;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+
+#column1 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s forwards;
+  animation-delay: 0.2s;
+}
+
+#column2 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s forwards;
+  animation-delay: 0.4s;
+}
+
+#column3 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s forwards;
+  animation-delay: 0.6s;
+}
+
+#column4 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s forwards;
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.map {
+  background-color: rgb(22, 22, 24);
+  padding: 30px;
+}
+
+.map-round {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.map-round iframe {
+  display: block;
+  width: 100%;
+  height: 500px;
+}
+
+.seperate {
+  height: 1px;
+  width: 90%;
+  background-color: gray;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.name {
+  padding-top: 10px;
+  color: white;
+  font-size: medium;
+}
+
+#sp {
+  color: yellow;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px 0 60px;
+  width: 100%; /* ✅ Stretch full width */
+  box-sizing: border-box;
+}
+
+
+.right a {
+  margin-left: 15px;
+  color: grey;
+  font-size: medium;
+}
+
+.right a:hover {
+
+  color: orangered;
+}
+
+#right-section {
+  color: orange;
+  display: flex;
+  flex-direction: column;
+  /* Stack headings vertically */
+  align-items: flex-start;
+  /* Align them to the left */
+  padding: 60px;
+  padding-top: 100px;
+  padding-left: 100px;
+
+}
+
+#left-section,
+#right-section {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#pro {
+  color: white;
+}
+
+#icon {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+}
+
+#left-section {
+  margin-top: 40px;
+  border: 2px solid white;
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #161618;
+  /* Optional, for design */
+  max-width: 600px;
+}
+/* contact */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 4s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* contact end */
+
+.input-box {
+  border: 2px solid white;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+#left-section label {
+  margin-top: 10px;
+  background-color: transparent;
+}
+
+.form-control {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+#social-icons img {
+  margin-right: 15px;
+}
+
+#left-side {
+  background-color: orangered;
+  margin-left: 170px;
+  margin-top: 80px;
+  height: 500px;
+  width: 500px;
+  border-radius: 15px 0 0 15px;
+}
+
+#right-side {
+  background-color: white;
+  height: 500px;
+  width: 500px;
+  border-radius: 0 15px 15px 0;
+  margin-top: 80px;
+}
+
+#left-part {
+  background-color: orangered;
+  margin-left: 170px;
+  margin-top: 80px;
+  height: 650px;
+  width: 500px;
+  border-radius: 15px 0 0 15px;
+}
+
+#right-part {
+  background-color: white;
+  height: 650px;
+  width: 500px;
+  border-radius: 0 15px 15px 0;
+  margin-top: 80px;
+}
+
+.content-box {
+  padding: 30px 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+select {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1.5px solid #999;
+  border-radius: 8px;
+  background-color: white;
+  appearance: none;
+  cursor: pointer;
+  border: none;
+}
+
+/* index start */
+
+
+
+/*index end  */
+
+/* services page*/
+.btn-orange:hover {
+  background-color: #e65c00;
+  color: #fff;
+}
+
+/* Light Button */
+.btn-white {
+  background-color: #ffffff;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Hero Background */
+.hero-wrapper {
+  background: radial-gradient(circle at left, #fff1e6, #ffffff);
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+/* Badge Top */
+.badge-top {
+  display: inline-block;
+  background-color: #ffe6cc;
+  color: #ff6600;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.hero-section {
+  background-image: url('...');
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+}
+/* Zoom-in animation keyframes */
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Apply animation to the section */
+.zoom-in {
+  animation: zoomIn 1s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0; /* start hidden until animation runs */
+}
+.icon-box{
+  border:2px solid transparent;
+  outline: none;
+  cursor:pointer;
+  border-radius: 5px;
+}
+.icon-box:hover {
+border: 2px solid orange;
+background-color: #2f3c4f;
+}
+/* service end */
+
+
+/* project start */
+.featured-projects {
+  background-color: #0d0d1f;
+  /* very dark navy background */
+  color: white;
+  text-align: center;
+  padding:100px 0px;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.featured-projects .subheading {
+  color: #ff6a00;
+  /* orange highlight */
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.featured-projects h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.featured-projects .description {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.portfolio {
+  background-color: #2f3c4f;
+  /* dark bluish background */
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  position: relative;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  width: 100%;
+}
+
+.category {
+  color: #ff6a00;
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.overlay h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.overlay p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.overlay a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s;
+}
+
+.overlay a:hover {
+  border-color: #ff6a00;
+}
+
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.stat-card {
+  background-color: #1a1a2e;
+  /* slightly lighter dark */
+  border-radius: 10px;
+  padding: 30px 20px;
+  width: 200px;
+  transition: transform 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  color: #ff6a00;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+.project-call {
+  background-color: #0d0d1f;
+  /* dark background */
+  text-align: center;
+  padding: 100px 20px;
+  color: white;
+}
+
+.project-call h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.project-call p {
+  font-size: 1.2rem;
+  color: #ccc;
+  /* light gray text */
+  margin-bottom: 30px;
+}
+
+.btn-touch {
+  background-color: #ff6a00;
+  /* orange button */
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.btn-touch:hover {
+  background-color: #e55d00;
+}
+
+
+/* project end */
+
+/* index page start */
+.row.animate-text {
+  color:white;
+  animation: slideIn 2s ease-in-out forwards;
+  background-color: red;
+}
+
+/* Animation definition */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* index page start */
+#r{
+  background-color: #1e2134;
+  height: 710px;
+}
+#start{
+  color:orange;
+  margin-top: 50px;
+  margin-left: 50px;
+  animation:SlideIn 2s ease-in-out forwards;
+
+}
+@keyframes SlideIn{
+  from{
+    opacity:0;
+    transform: translateY(-50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#starts{
+  text-align: left;
+  justify-content: left;
+  margin-left: 50px;
+  padding-top: 30px;
+  animation:SlideIn 2s ease-in-out forwards;
+
+}
+@keyframes SlideIn{
+  from{
+    opacity:0;
+    transform: translateY(-50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#heading{
+  color: white;
+  margin-left: 50px;
+  margin-top: 30px;
+  font-size: larger;
+  font-weight: 400;
+}
+.btn{
+  background-color: orange;
+  margin-left: 50px;
+  margin-top: 50px;
+  border: none;
+  width: 150px;
+  height: 50px;
+  display: flex; /* necessary for justify-content */
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: darkorange;
+}
+
+.state {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 30px;
+  margin-left:80px ;
+}
+
+.stat-card {
+  background-color:white;
+  /* slightly lighter dark */
+  border-radius: 10px;
+  padding: 20px 20px;
+  width: 200px;
+  transition: transform 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+#bod{
+  border:2px solid white;
+border-radius: 10px;
+  margin:auto;
+  display: flex;
+  gap:20px;
+  padding: 20px;
+  margin-top: 70px;
+margin-left:50px;
+margin-right: 300px;
+position: relative;
+animation:SlideLeft 1s ease-out forwards;
+opacity:0;
+}
+@keyframes SlideLeft{
+  0%{
+    left:-300px;
+    opacity:0;
+  }
+  100%{
+    left:0;
+    opacity:1;
+  }
+}
+#imgs{
+  transition:transform 0.3s ease;
+}
+#imgs:hover{
+transform: scale(1.1);
+}
+#main{
+  color: white;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#main1{
+font-weight: 700;
+display: flex;
+  justify-content: center;
+  align-items: center;
+  color:orange;
+}
+/* Common animation setup */
+.card {
+ min-height: 150px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  transition: transform 0.3s;
+
+}
+
+/* Upper cards slide from right */
+.slide-from-right .card {
+  transform: translateX(100px);
+  animation-name: slideRightIn;
+}
+
+/* Lower cards slide from left */
+.slide-from-left .card {
+  transform: translateX(-100px);
+  animation-name: slideLeftIn;
+}
+
+/* Keyframes */
+@keyframes slideRightIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeftIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.custom-box {
+ background-color: #f0f0f0; /* Light gray */
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  transform: translateY(0);
+  color: #333;
+}
+
+.custom-box:hover {
+  transform: translateY(-20px);
+  background-color: #ffa726; /* Orange tone */
+  color: black;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.box-img {
+ width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  filter: grayscale(100%);
+}
+
+/* Default: grayscale image */
+.box-img.gray {
+  filter: grayscale(0%);
+}
+
+.mt-3{
+  color:red;
+  display: flex;
+  text-align: left;
+}
+
+.small-box{
+  height:150px;
+  width:250px;
+  background-color: chocolate;
+  border-radius: 12px;
+}
+
+
+/* index page end */
